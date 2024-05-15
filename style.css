@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(todolist-bg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(40px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.heading{
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.363);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.container{
+    /* overflow-y: auto; */
+    position: relative;
+    padding: 5px 50px 20px 50px;
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.255);
+    outline: 1px solid rgba(255, 255, 255, 0.249);
+    outline-offset: 5px;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.096);
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.34);
+}
+.container:focus{
+    border:1px solid rgba(255, 255, 255, 0.886) ;
+}
+.todo{
+    width: 18em;
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.todo input{
+    height: 2.3em;
+    width: 5em;
+    width: 70%;
+    border: none;
+    color: white;
+    background:none;
+    padding: 0.5em 0.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.373);
+}
+.todo input::placeholder{
+    color: white;
+    opacity: 50%;
+}
+.todo input:focus{
+   outline: none;
+   border-color: #5a95ff;
+}
+.todo button{
+    height: 2.7em;
+    width: 5em;
+    margin-left: 0.2em;
+    background-color: #2568e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.todo button:hover{
+    background-color: #035bff;
+    border: 1px solid rgba(255, 255, 255, 0.415);
+}
+.message{
+    color: white;
+    opacity: 70%;
+}
+.message span{
+    color: yellow;
+}
+.lists{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    width: 18em;
+    height: 2em;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-top: 5px;
+    background-color:rgba(255, 255, 255, 0.416) ;
+}
+.list-front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.check-box{
+    height: 1.2em;
+    width: 2em;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.list-end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit , .delete{
+    height: 1.8em;
+    width: 2em;
+    background-color: #f0faff;
+    border: 1px solid rgba(0, 0, 0, 0.484);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit{
+    background-color: #5a94ff;
+    color: white;
+    margin-right: 5px;
+}
+.delete{
+    background-color: rgba(255, 0, 0, 0.942);
+    color: white;
+}
+.edit:hover{
+    background-color: black;
+    color: white;
+}
+.delete:hover{
+    background-color: black;
+    color: white;
+}
+.last-msg{
+    position: relative;
+    display: none;
+    width: 25em;
+    border: 1px solid rgba(255, 255, 255, 0.255);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.096);
+    text-align: center;
+    padding: 7px 0px;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.34);
+}
+
+/*! Code for responsiveness */
+@media screen and (orientation : portrait) {
+    .todo{
+        width: 12em;
+    }
+    .todo input{
+        height: 1.8em;
+        width: 10.2em;
+    }
+    .todo button{
+        height: 2.5em;
+        width: 15em;
+    }
+    .container{
+        width: 15em;
+    }
+    .last-msg{
+        width: 21em;
+    }
+}
